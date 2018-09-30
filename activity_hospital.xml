@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.drseoul.HospitalActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+            <fragment
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/mapView2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                tools:context="com.example.drseoul.HospitalActivity" />
+
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8sp"
+                android:text="Hospital name"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Location"
+                android:textColor="#00a7b8"
+                android:textSize="17sp"
+                android:layout_margin="5sp"
+                tools:text="Location" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/txtadress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="TextView"
+                    android:gravity="center"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_margin="5sp"
+                android:text="Business Hours"
+                android:textColor="#00a7b8"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10sp">
+                <Spinner
+                    android:id="@+id/spindate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/txttime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Speciality"
+                android:textSize="17sp"
+                android:layout_margin="5sp"
+
+                android:gravity="center"
+                tools:text="Speciality"
+                android:textColor="#00a7b8"
+                />
+            <TextView
+                android:id="@+id/txttype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:padding="10sp">
+
+        <Button
+            android:id="@+id/btncall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:background="@drawable/btncircle"
+            android:text="call"
+            android:onClick="mClick"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="  " />
+
+        <Button
+            android:id="@+id/btnaddmy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:onClick="mClick"
+            android:textSize="13sp"
+            android:background="@drawable/searhbox"
+            android:text="ADD"
+            android:textColor="#00a7b8" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
